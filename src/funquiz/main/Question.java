@@ -1,35 +1,27 @@
 package funquiz.main;
 
-import java.util.ArrayList;
+public abstract class Question {
+    private String question;
+    private int pointValue;
 
-public class Question {
-    private int id;
-    private static int nextStudentId = 1;
-    private String questionName;
-    private String questionType;
-    private ArrayList<String> options;
-
-    public ArrayList<String> getOptions(){
-        return this.options;
-    }
-    public void setOptions(ArrayList<String> aOptions){
-        this.options = aOptions;
-    }
-    public int getId(){
-        return this.id;
-    }
-    public String getQuestionType(){
-        return this.questionType;
-    }
-    public void setQuestionType(String aQuestionType){
-        this.questionType = aQuestionType;
-    }
-    public String getQuestionName(){
-        return this.questionName;
-    }
-    public void setQuestionName(String aQuestionName){
-        this.questionName = aQuestionName;
+    public Question(String question, int pointValue) {
+        this.question = question;
+        this.pointValue = pointValue;
     }
 
+    public String getQuestion() {
+        return question;
+    }
 
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public int getPointValue() {
+        return pointValue;
+    }
+
+    public void setPointValue(int pointValue) {
+        this.pointValue = pointValue;
+    }
 }
