@@ -2,9 +2,9 @@ package funquiz.main;
 
 public abstract class Question {
     private String question;
-    private int pointValue;
+    private double pointValue;
 
-    public Question(String question, int pointValue) {
+    public Question(String question, double pointValue) {
         this.question = question;
         this.pointValue = pointValue;
     }
@@ -17,11 +17,17 @@ public abstract class Question {
         this.question = question;
     }
 
-    public int getPointValue() {
+    public double getPointValue() {
         return pointValue;
     }
 
-    public void setPointValue(int pointValue) {
+    public void setPointValue(double pointValue) {
         this.pointValue = pointValue;
     }
+
+    public void displayQuestion(){
+        System.out.println(this.question);
+    }
+    public abstract void displayAnswers();
+    public abstract double getAnswers();
 }
